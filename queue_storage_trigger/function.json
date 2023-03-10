@@ -1,0 +1,12 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "storagequeue3qcc9g",
+      "connection": "MyStorage"
+    }
+  ],
+  "scriptFile": "../dist/queue_storage_trigger/index.js"
+}
