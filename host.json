@@ -1,5 +1,8 @@
 {
   "version": "2.0",
+  "functions": [
+    "event_grid_trigger"
+  ],
   "logging": {
     "applicationInsights": {
       "samplingSettings": {
@@ -16,6 +19,28 @@
       "maxDequeueCount": 5,
       "newBatchThreshold": 8,
       "messageEncoding": "base64"
+    },
+    "blobs": {
+      "maxDegreeOfParallelism": 4
+    },
+    "serviceBus": {
+      "batchOptions": {
+        "autoComplete": true,
+        "maxMessageCount": 1000,
+        "operationTimeout": "00:01:00"
+      },
+      "messageHandlerOptions": {
+        "autoComplete": true,
+        "maxAutoRenewDuration": "00:05:00",
+        "maxConcurrentCalls": 32
+      },
+      "prefetchCount": 0,
+      "sessionHandlerOptions": {
+        "autoComplete": false,
+        "maxAutoRenewDuration": "00:55:00",
+        "maxConcurrentSessions": 16,
+        "messageWaitTimeout": "00:00:30"
+      }
     }
   },
   "extensionBundle": {

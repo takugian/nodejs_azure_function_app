@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "name": "myBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "files/{name}",
+      "connection": "MyStorage"
+    },
+    {
+      "name": "myInputBlob",
+      "type": "blob",
+      "direction": "in",
+      "path": "files/{name}",
+      "connection": "MyStorage"
+    },
+    {
+      "name": "myOutputBlob",
+      "type": "blob",
+      "direction": "out",
+      "path": "files-copy/{name}",
+      "connection": "MyStorage"
+    }
+  ],
+  "scriptFile": "../dist/blob_storage_trigger/index.js"
+}

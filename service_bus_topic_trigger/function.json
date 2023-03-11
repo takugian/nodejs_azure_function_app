@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "topicName": "mytopic",
+      "subscriptionName": "mysubscription",
+      "connection": "MyServiceBus"
+    },
+    {
+      "name": "outputSbTopic",
+      "type": "serviceBus",
+      "direction": "out",
+      "topicName": "mytopicout",
+      "connection": "MyServiceBus"
+    }
+  ],
+  "scriptFile": "../dist/service_bus_topic_trigger/index.js"
+}

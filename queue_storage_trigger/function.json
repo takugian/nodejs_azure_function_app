@@ -4,7 +4,14 @@
       "name": "myQueueItem",
       "type": "queueTrigger",
       "direction": "in",
-      "queueName": "storagequeue3qcc9g",
+      "queueName": "queue",
+      "connection": "MyStorage"
+    },
+    {
+      "name": "myOutQueueItem",
+      "type": "queue",
+      "direction": "out",
+      "queueName": "outqueue",
       "connection": "MyStorage"
     }
   ],
