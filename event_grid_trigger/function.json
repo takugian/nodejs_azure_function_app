@@ -1,9 +1,16 @@
 {
   "bindings": [
     {
-      "type": "eventGridTrigger",
       "name": "eventGridEvent",
+      "type": "eventGridTrigger",
       "direction": "in"
+    },
+    {
+      "name": "outputEvent",
+      "type": "eventGrid",
+      "direction": "out",
+      "topicEndpointUri": "MyEventGridTopicUriSetting",
+      "topicKeySetting": "MyEventGridTopicKeySetting"
     }
   ],
   "scriptFile": "../dist/event_grid_trigger/index.js"
