@@ -6,14 +6,14 @@
       "direction": "in",
       "topicName": "mytopic",
       "subscriptionName": "mysubscription",
-      "connection": "MyServiceBus"
+      "connection": "ServiceBus"
     },
     {
       "name": "outputSbTopic",
       "type": "serviceBus",
       "direction": "out",
       "topicName": "mytopicout",
-      "connection": "MyServiceBus"
+      "connection": "ServiceBus"
     }
   ],
   "scriptFile": "../dist/service_bus_topic_trigger/index.js"

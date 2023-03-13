@@ -5,14 +5,14 @@
       "type": "serviceBusTrigger",
       "direction": "in",
       "queueName": "myinputqueue",
-      "connection": "MyServiceBus"
+      "connection": "ServiceBus"
     },
     {
       "name": "outputSbQueue",
       "type": "serviceBus",
       "direction": "out",
       "queueName": "myoutputqueue",
-      "connection": "MyServiceBus"
+      "connection": "ServiceBus"
     }
   ],
   "scriptFile": "../dist/service_bus_queue_trigger/index.js"

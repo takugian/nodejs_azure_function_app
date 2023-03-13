@@ -9,8 +9,8 @@
       "name": "outputEvent",
       "type": "eventGrid",
       "direction": "out",
-      "topicEndpointUri": "MyEventGridTopicUriSetting",
-      "topicKeySetting": "MyEventGridTopicKeySetting"
+      "topicEndpointUri": "EventGridTopicUriSetting",
+      "topicKeySetting": "EventGridTopicKeySetting"
     }
   ],
   "scriptFile": "../dist/event_grid_trigger/index.js"

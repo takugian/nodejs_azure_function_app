@@ -1,0 +1,35 @@
+{
+  "bindings": [
+    {
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "authLevel": "function",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "name": "personEntity",
+      "type": "table",
+      "direction": "in",
+      "tableName": "Person",
+      "partitionKey": "pk",
+      "rowKey": "{httpTrigger}",
+      "connection": "Storage"
+    },
+    {
+      "name": "res",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "name": "tableBinding",
+      "type": "table",
+      "direction": "out",
+      "tableName": "Event",
+      "connection": "Storage"
+    }
+  ],
+  "scriptFile": "../dist/table_storage_in_out/index.js"
+}
